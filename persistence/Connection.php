@@ -7,7 +7,7 @@ class Connection {
 	 * Open the conection 
 	 */ 
 	function open(){
-		$this -> mysqli = new mysqli("localhost", "root", "", "pb");
+		$this -> mysqli = new mysqli("localhost", "id14719434_pruebabacknuvu", "8F*vuC]|[^I=%5YN", "id14719434_pb");
 		$this -> mysqli -> set_charset("utf8");
 	}
 
