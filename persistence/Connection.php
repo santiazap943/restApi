@@ -9,6 +9,9 @@ class Connection {
 	function open(){
 		//$this -> mysqli = new mysqli("localhost", "root", "", "pb");
 		$this -> mysqli = new mysqli("nwhazdrp7hdpd4a4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "zegfz8ulobvovg8h", "	hycalddskg402woc", "nw0yozw8m4iq4r0i");
+		if ($this -> mysqli->connect_error) {
+			die("Connection failed: " . $this -> mysqli->connect_error);
+		}
 		$this -> mysqli -> set_charset("utf8");
 	}
 
