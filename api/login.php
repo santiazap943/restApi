@@ -12,7 +12,6 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 date_default_timezone_set("America/Bogota");
 $email = '';
 $password = '';
-$data = json_decode(file_get_contents("php://input"));
 $email = $email = $_POST['email'];;
 $password = $_POST['password'];
 $administrator = new Administrator();
@@ -42,5 +41,9 @@ if($administrator -> logIn($email, $password)){
     else{
 
         http_response_code(401);
+        echo json_encode(array("correo" => $email, "password" => $password));
+        $administrator = new Administrator();
+        $administrator ->select();
+        echo json_encode(array("correo" => $administrator -> getEmail(), "id" => $administrator -> getIdAdministrator()));
         echo json_encode(array("message" => "Login failed.", "password" => $password));
     }
