@@ -17,7 +17,7 @@ $email = $email = $_POST['email'];;
 $password = $_POST['password'];
 $administrator = new Administrator();
 if($administrator -> logIn($email, $password)){
-    $secret_key = "prueba4";
+    $secret_key = "pruebaNuvu";
         $issuedat_claim = time(); // issued at
         $notbefore_claim = $issuedat_claim + 10; //not before in seconds
         $token = array(

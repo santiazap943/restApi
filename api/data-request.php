@@ -10,7 +10,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-$secret_key = "prueba5";
+$secret_key = "pruebaNuvu";
 $jwt = null;
 
 $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
